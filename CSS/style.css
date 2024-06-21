@@ -132,7 +132,11 @@ header .menu-toggle {
 
 /* Hero Section Styles */
 .hero {
+<<<<<<< HEAD
     background-image: url('/images/5.png');
+=======
+    background-image: url('./images/pexels-pixabay-256514.jpg');
+>>>>>>> 75c0da791a6e97ed5ba795af32d9a1bb94a45032
     background-size: cover;
     background-position: center;
     color: white;
