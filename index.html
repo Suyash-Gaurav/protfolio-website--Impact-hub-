@@ -29,18 +29,7 @@
             </nav>
         </div>
     </header>
-    
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('show');
-        });
-    
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
-    </script>
-    
+        
 
     <main>
         <section class="hero" aria-labelledby="hero-title">
@@ -116,7 +105,7 @@
                 
                 <div class="footer-section newsletter">
                     <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter to stay updated on our latest events and projects.</p>
+                    
                     <form action="#" method="post">
                         <input type="email" name="email" placeholder="Enter your email" required>
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
