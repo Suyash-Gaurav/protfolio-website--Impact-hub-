@@ -13,6 +13,16 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Header Styles */
 header {
@@ -34,12 +44,20 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+
 
 header .logo {
     font-size: 1.8em;
     font-weight: 700;
     color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 10apx;
 }
 
 header nav {
@@ -60,16 +78,15 @@ header nav ul li {
 
 header nav ul li a {
     color: white;
-    text-decoration: none;
     padding: 5px 15px;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
 header nav ul li a:hover {
     background-color: #34495e;
     color: #ecf0f1;
-    border-radius: 5px;
 }
 
 header .menu-toggle {
@@ -78,6 +95,7 @@ header .menu-toggle {
     font-size: 1.5em;
     color: white;
 }
+
 
 @media (max-width: 768px) {
     header .container {
@@ -114,7 +132,7 @@ header .menu-toggle {
 
 /* Hero Section Styles */
 .hero {
-    background-image: url('/images/pexels-pixabay-256514.jpg');
+    background-image: url('/images/5.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -256,13 +274,49 @@ section p {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .about-image img {
-    max-width: 100%;
+    max-width: 75%;
     border-radius: 10px;
 }
 
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.service {
+    flex: 1 1 calc(25% - 40px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -312,12 +366,28 @@ section p {
         font-size: 0.9em;
     }
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Footer Styles */
 footer {
     background-color: #2c3e50;
     color: white;
-    padding: 40px 0;
+    padding: 60px 0 20px;
     font-family: Arial, sans-serif;
 }
 
@@ -331,12 +401,12 @@ footer .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
 }
 
 footer .footer-section {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
     margin-bottom: 20px;
 }
 
@@ -344,6 +414,19 @@ footer .footer-section h3 {
     margin-bottom: 15px;
     font-size: 1.5em;
     color: #e74c3c;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer .footer-section h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 footer .footer-section p,
@@ -379,25 +462,32 @@ footer .footer-section ul li a:hover {
 
 footer .footer-section .social-media {
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 footer .footer-section .social-media a {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    transition: color 0.3s;
+    transition: background-color 0.3s;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 footer .footer-section .social-media a:hover {
-    color: #e74c3c;
+    background-color: #e74c3c;
 }
 
 footer .footer-section .newsletter form {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 footer .footer-section .newsletter input[type="email"] {
@@ -406,10 +496,16 @@ footer .footer-section .newsletter input[type="email"] {
     border: none;
     border-radius: 5px;
     font-size: 1em;
+    background-color: #fff;
+    color: #2c3e50;
+}
+
+footer .footer-section .newsletter input[type="email"]::placeholder {
+    color: #ccc;
 }
 
 footer .footer-section .newsletter button {
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #e74c3c;
     border: none;
     color: white;
@@ -428,41 +524,28 @@ footer .footer-section .newsletter button:hover {
 
 footer p {
     text-align: center;
-    margin: 20px 0 0;
+    margin: 40px 0 0;
+    font-size: 0.9em;
+    color: #bbb;
 }
 
-/* Additional CSS for Better Styling */
-footer .footer-section h3::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #e74c3c;
-    margin-top: 10px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-section {
+        min-width: 100%;
+    }
+
+    footer .footer-section .social-media {
+        justify-content: center;
+    }
 }
 
-footer .footer-section .social-media a {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-}
-
-footer .footer-section .social-media a:hover {
-    background-color: #e74c3c;
-}
-
-footer .footer-section .newsletter input[type="email"] {
-    background-color: #fff;
-    color: #2c3e50;
-}
-
-footer .footer-section .newsletter input[type="email"]::placeholder {
-    color: #ccc;
-}
 
 /* Keyframes */
 @keyframes slideInDown {
@@ -529,3 +612,4 @@ footer .footer-section .newsletter input[type="email"]::placeholder {
         transform: scale3d(1, 1, 1);
     }
 }
+

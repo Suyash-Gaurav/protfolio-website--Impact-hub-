@@ -14,6 +14,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('show');
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const header = document.querySelector('header');

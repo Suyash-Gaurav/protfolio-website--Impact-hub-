@@ -29,6 +29,18 @@
             </nav>
         </div>
     </header>
+    
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('show');
+        });
+    
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+    
 
     <main>
         <section class="hero" aria-labelledby="hero-title">
@@ -46,45 +58,51 @@
                     <div class="about-text">
                         <p>TIU Impact Hub is a student-led organization at Tokyo International University, dedicated to fostering innovation, entrepreneurship, and leadership among business students. Our mission is to create a collaborative environment where students can develop their skills, connect with industry leaders, and make a meaningful impact in the world of business.</p>
                     </div>
-                    <div class="about-image">
-                        <img src="about-us.jpg" alt="About Us Image">
+                   
+                    <div class="services">
+                        <div class="service">
+                            <i class="fas fa-cogs"></i>
+                            <p>Programs and Initiatives</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-globe"></i>
+                            <p>Global Representation & Opportunities</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Business Startup Support</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-handshake"></i>
+                            <p>International Collaboration</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-user-graduate"></i>
+                            <p>Skill Development</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-life-ring"></i>
+                            <p>Specialized Support</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-users"></i>
+                            <p>Leadership Building</p>
+                        </div>
+                        <div class="service">
+                            <i class="fas fa-tasks"></i>
+                            <p>Project Management</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="goals" aria-labelledby="goals-title">
-            <div class="container">
-                <h2 id="goals-title">Our Goals</h2>
-                <div class="goals-content">
-                    <div class="goal">
-                        <h3>Foster Innovation and Entrepreneurship</h3>
-                        <p>Provide resources and mentorship to students with entrepreneurial aspirations. Organize hackathons, startup weekends, and pitch competitions.</p>
-                    </div>
-                    <div class="goal">
-                        <h3>Leadership Development</h3>
-                        <p>Conduct workshops and seminars on leadership skills. Offer leadership roles within the organization to enhance practical experience.</p>
-                    </div>
-                    <div class="goal">
-                        <h3>Industry Connections</h3>
-                        <p>Facilitate networking opportunities with industry leaders. Arrange guest lectures and panel discussions with experts.</p>
-                    </div>
-                    <div class="goal">
-                        <h3>Community Engagement</h3>
-                        <p>Implement projects that address local and global challenges. Partner with non-profits and community organizations for outreach programs.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
     </main>
 
     <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section about">
-                    <h3>About Us</h3>
-                    <p>TIU Impact Hub is dedicated to fostering innovation, entrepreneurship, and leadership among business students at Tokyo International University.</p>
-                </div>
                 <div class="footer-section links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -95,16 +113,7 @@
                         <li><a href="#"><i class="fas fa-envelope"></i> Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="footer-section contact">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> contact@tiuimpacthub.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Tokyo International University, Business Department</p>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+                
                 <div class="footer-section newsletter">
                     <h3>Newsletter</h3>
                     <p>Subscribe to our newsletter to stay updated on our latest events and projects.</p>
@@ -113,10 +122,24 @@
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
             <p>&copy; 2024 TIU Impact Hub. All rights reserved.</p>
+            <p><i class="fas fa-envelope"></i> contact@tiuimpacthub.com</p>
+            
         </div>
+
     </footer>
+    
+    
     <script src="script.js"></script>
 </body>
 
